@@ -1,0 +1,10 @@
+basket = []
+basket.append("oats")
+basket.append("beans")
+basket.append("ball")
+basket.append("juice")
+basket.append("vegetables")
+basket.append("hockey")
+print(basket)
+basket.remove("hockey")
+print(basket)
