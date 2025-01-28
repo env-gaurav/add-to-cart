@@ -1,56 +1,50 @@
-basket=[]
-quantity=[]
-amount=[]
-total= 0.0
-shopping_mall='''
-1. Apple        10   
-2. Banana       20   
-3. Litchi       30   
-4. Grapes       40
-5. Exit
-'''
-print(shopping_mall)
-while True:
-    choice= input("Enter your choice: ")
-    if choice== "5":
-        print("Exiting the program")
-        break
-    elif choice == "1":
-        basket.append("Apple")
-        qty=int(input("Enter quantity: "))
-        quantity.append(qty)
-        sub_total = qty*10
-        amount.append(sub_total)
-        total += sub_total
-        print(f"{qty} Apple added to cart")
-    elif choice == "2":
-        basket.append("Banana")
-        qty=int(input("Enter quantity: "))
-        quantity.append(qty)
-        sub_total = qty*20
-        amount.append(sub_total)
-        total += sub_total
-        print(f"{qty} Banana added to cart")
-    elif choice == "3":
-        basket.append("Litchi")
-        qty=int(input("Enter quantity: "))
-        quantity.append(qty)
-        sub_total = qty*30
-        amount.append(sub_total)
-        total += sub_total
-        print(f"{qty} Litchi added to cart")
-    elif choice == "4":
-        basket.append("Grapes")
-        qty=int(input("Enter quantity: "))
-        quantity.append(qty)
-        sub_total = qty*40
-        amount.append(sub_total)
-        total += sub_total
-        print(f"{qty} Grapes added to cart")
-    else:
-        print("provide correct input")
+basket = []
+quantity = []
+sub_total = []
+gt = 0.0
+cafe=f'''
+{"*"*25}
+        RAMESHWARAM CAFE
+{"*"*25}
 
-print(basket)
+1. MASALA DOSA      100
+2. GHEE IDLI        50
+3. PLAIN IDLI       20
+4. EXIT
+
+'''
+print(cafe)
+while True:
+    choice=int(input("ENTER YOUR CHOICE: "))
+    if choice == 1:
+        basket.append("MASALA DOSA")
+        qty = int(input("ENTER QUANTITY: "))
+        quantity.append(qty)
+        sub_total.append(qty*100)
+        gt = gt + (qty*100)
+        
+        print(f"{qty} MASALA DOSA ADDED TO CART")
+    elif choice == 2:
+        basket.append("GHEE IDLI")
+        qty = int(input("ENTER QUANTITY: "))
+        quantity.append(qty)
+        sub_total.append(qty*50)
+        gt = gt + (qty*50)
+        print(f"{qty} GHEE IDLI ADDED TO CART")
+    elif choice == 3:
+        basket.append("PLAIN IDLI")
+        qty = int(input("ENTER QUANTITY: "))
+        quantity.append(qty)
+        sub_total.append(qty*20)
+        gt = gt + (qty*20)
+        print(f"{qty} PLAIN IDLI ADDED TO CART")
+    elif choice == 4:
+        print("EXITING THE PROGRAM")
+        break
+    else:
+        print("PLEASE PROVIDE CORRECT INPUT")
+        
+print(basket)        
 print(quantity)
-print(amount)
-print( "Grand Total: " , total)
+print(sub_total)
+print("GRAND TOTAL", gt)
